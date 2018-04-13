@@ -48,5 +48,12 @@ namespace FillingStation
             pnlStart.Visible = false;
             new UI.Purchasing.frmPO() .TopMost = true;
         }
+
+        private void lblob_Click(object sender, EventArgs e)
+        {
+            new UI.Stock.frmOpenningBalence().Show();
+            pnlStart.Visible = false;
+            new UI.Stock.frmOpenningBalence().TopMost = true;
+        }
     }
 }

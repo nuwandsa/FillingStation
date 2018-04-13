@@ -161,7 +161,7 @@ namespace FillingStation.UI.master
         }
 
         private void txtsearch_Leave(object sender, EventArgs e)
-        {
+         {
             if (!txtsearch.Focused && !dgdItemSearch.Focused)
             {
                 dgdItemSearch.Visible = false;

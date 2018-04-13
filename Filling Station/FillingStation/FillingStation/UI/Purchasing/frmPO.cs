@@ -134,7 +134,7 @@ namespace FillingStation.UI.Purchasing
             if (!txtPOItemCode.Focused && !dgdPOItemSearch.Focused)
             {
                 dgdPOItemSearch.Visible = false;
-            }
+            } 
         }
 
         private void dgdPOItemSearch_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -166,7 +166,7 @@ namespace FillingStation.UI.Purchasing
                 txtPOUoM.Clear();
                 txtPOItmUnitPrice.Text = "0.00";
                 txtPOSubTotal.Text = "0.00";
-
+                 
                 //txtInvoiceTotal.Text = Convert.ToString(calculateTotal());
 
             }

@@ -119,6 +119,7 @@
     </Compile>
     <Compile Include="Logic\Invoice.cs" />
     <Compile Include="Logic\Item.cs" />
+    <Compile Include="Logic\OB.cs" />
     <Compile Include="Logic\PO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -145,6 +146,12 @@
     </Compile>
     <Compile Include="UI\Sales\frmInvoice.Designer.cs">
       <DependentUpon>frmInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Stock\frmOpenningBalence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Stock\frmOpenningBalence.Designer.cs">
+      <DependentUpon>frmOpenningBalence.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -173,6 +180,9 @@
     <EmbeddedResource Include="UI\Sales\frmInvoice.resx">
       <DependentUpon>frmInvoice.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Stock\frmOpenningBalence.resx">
+      <DependentUpon>frmOpenningBalence.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -187,9 +197,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UI\Stock\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
