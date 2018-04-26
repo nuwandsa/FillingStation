@@ -302,10 +302,34 @@ namespace FillingStation.UI.Sales
             txtInvoiceBalance.Text = Convert.ToString(calBalence());
         }
 
+        private void btnInvosave_Click(object sender, EventArgs e)
+        {
+              
+        }
+
         internal decimal calBalence()
         {
             decimal bal = Convert.ToDecimal(txtInvoiceTotalDue.Text) - Convert.ToDecimal(txtPayingAmount.Text);
             return bal;
+        }
+
+        internal DataTable fromInvoTable()
+        {
+            DataTable dt = new DataTable();
+            for (int i = 0; i < dgdInvoice.Columns.Count; i++)
+            {
+                dt.Columns.Add(dgdInvoice.Columns[i].Name);
+            }
+            foreach (DataGridViewRow row in dgdInvoice.Rows)
+            {
+                DataRow dr = dt.NewRow();
+                for (int j = 0; j < dgdInvoice.Columns.Count; j++)
+                {
+                    dr[dgdInvoice.Columns[j].Name] = row.Cells[j].Value;
+                }
+                dt.Rows.Add(dr);
+            }
+            return dt;
         }
 
     }

@@ -121,6 +121,7 @@
     <Compile Include="Logic\Item.cs" />
     <Compile Include="Logic\OB.cs" />
     <Compile Include="Logic\PO.cs" />
+    <Compile Include="Logic\RemainingQty.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\master\frmItem.cs">
@@ -153,6 +154,12 @@
     <Compile Include="UI\Stock\frmOpenningBalence.Designer.cs">
       <DependentUpon>frmOpenningBalence.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Stock\frmRemainingBalance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Stock\frmRemainingBalance.Designer.cs">
+      <DependentUpon>frmRemainingBalance.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Stock\frmOpenningBalence.resx">
       <DependentUpon>frmOpenningBalence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Stock\frmRemainingBalance.resx">
+      <DependentUpon>frmRemainingBalance.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

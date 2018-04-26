@@ -30,10 +30,11 @@
         {
             this.btnStart = new MetroFramework.Controls.MetroButton();
             this.pnlStart = new MetroFramework.Controls.MetroPanel();
+            this.lblob = new MetroFramework.Controls.MetroLabel();
             this.lblPO = new System.Windows.Forms.Label();
             this.lblInvoice = new System.Windows.Forms.Label();
             this.lblItem = new System.Windows.Forms.Label();
-            this.lblob = new MetroFramework.Controls.MetroLabel();
+            this.lblRB = new MetroFramework.Controls.MetroLabel();
             this.pnlStart.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,6 +52,7 @@
             // pnlStart
             // 
             this.pnlStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pnlStart.Controls.Add(this.lblRB);
             this.pnlStart.Controls.Add(this.lblob);
             this.pnlStart.Controls.Add(this.lblPO);
             this.pnlStart.Controls.Add(this.lblInvoice);
@@ -66,6 +68,16 @@
             this.pnlStart.VerticalScrollbarHighlightOnWheel = false;
             this.pnlStart.VerticalScrollbarSize = 10;
             this.pnlStart.Visible = false;
+            // 
+            // lblob
+            // 
+            this.lblob.AutoSize = true;
+            this.lblob.Location = new System.Drawing.Point(6, 166);
+            this.lblob.Name = "lblob";
+            this.lblob.Size = new System.Drawing.Size(25, 19);
+            this.lblob.TabIndex = 3;
+            this.lblob.Text = "ob";
+            this.lblob.Click += new System.EventHandler(this.lblob_Click);
             // 
             // lblPO
             // 
@@ -100,15 +112,15 @@
             this.lblItem.Text = "Item";
             this.lblItem.Click += new System.EventHandler(this.lblItem_Click);
             // 
-            // lblob
+            // lblRB
             // 
-            this.lblob.AutoSize = true;
-            this.lblob.Location = new System.Drawing.Point(6, 166);
-            this.lblob.Name = "lblob";
-            this.lblob.Size = new System.Drawing.Size(25, 19);
-            this.lblob.TabIndex = 3;
-            this.lblob.Text = "ob";
-            this.lblob.Click += new System.EventHandler(this.lblob_Click);
+            this.lblRB.AutoSize = true;
+            this.lblRB.Location = new System.Drawing.Point(6, 147);
+            this.lblRB.Name = "lblRB";
+            this.lblRB.Size = new System.Drawing.Size(22, 19);
+            this.lblRB.TabIndex = 3;
+            this.lblRB.Text = "rb";
+            this.lblRB.Click += new System.EventHandler(this.lblRB_Click);
             // 
             // frmMain
             // 
@@ -136,5 +148,6 @@
         private System.Windows.Forms.Label lblInvoice;
         private System.Windows.Forms.Label lblPO;
         private MetroFramework.Controls.MetroLabel lblob;
+        private MetroFramework.Controls.MetroLabel lblRB;
     }
 }

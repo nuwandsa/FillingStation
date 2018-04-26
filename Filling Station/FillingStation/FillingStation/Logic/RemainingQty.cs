@@ -7,21 +7,20 @@ using System.Threading.Tasks;
 
 namespace FillingStation.Logic
 {
-    class OB
+    class RemainingQty
     {
-        public String ItemID { get; set; }
+        public string ItenID { get; set; }
         public string UoM { get; set; }
         public decimal Qty { get; set; }
     }
-
-    class OBService
+    class RemainingQtyService
     {
-        internal bool insertOB(Logic.OB ob)
+        internal bool insertRQty(Logic.OB ob)
         {
             try
             {
-                string query = "INSERT INTO tblopeningbalance "
-                                                   + "(stritemid"
+                string query = "INSERT INTO tblremainingqty "
+                                                   + "(strItemID"
                                                    + ",struom"
                                                    + ",dcmlqty"
                                                    + ")" +
@@ -59,7 +58,7 @@ namespace FillingStation.Logic
 
         internal DataTable getSearchResults()
         {
-            string query = "SELECT ob.`stritemid` as id,ob.`struom` as uom, ob.`dcmlqty` as qty,itm.`strItemName` as nme FROM tblopeningbalance ob INNER JOIN tblitem itm ON ob.stritemid=itm.`strItemID`";
+            string query = "SELECT rb.`strItemID` as id,rb.`struom` as uom, rb.`dcmlqty` as qty,itm.`strItemName` as nme FROM tblremainingqty rb INNER JOIN tblitem itm ON rb.stritemid=itm.`strItemID`";
             DataTable DT = new DataTable();
             try
             {
@@ -74,6 +73,32 @@ namespace FillingStation.Logic
                         throw;
                     }
                     return DT;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        internal decimal getQty(string itemid)
+        {
+            string query = "SELECT dcmlqty FROM tblremainingqty WHERE strItemID='" +itemid+ "' ";
+            decimal qty;
+            try
+            {
+                using (Data.DataAccessMySQL.Connect())
+                {
+                    try
+                    {
+                       qty = Data.DataAccessMySQL.getOneDecimalValue(query);
+                    }
+                    catch (Exception)
+                    {
+                        throw;
+                    }
+                    return qty;
                 }
             }
             catch (Exception)

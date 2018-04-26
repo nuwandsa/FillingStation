@@ -55,5 +55,12 @@ namespace FillingStation
             pnlStart.Visible = false;
             new UI.Stock.frmOpenningBalence().TopMost = true;
         }
+
+        private void lblRB_Click(object sender, EventArgs e)
+        {
+            new UI.Stock.frmRemainingBalance().Show();
+            pnlStart.Visible = false;
+            new UI.Stock.frmRemainingBalance().TopMost = true;
+        }
     }
 }

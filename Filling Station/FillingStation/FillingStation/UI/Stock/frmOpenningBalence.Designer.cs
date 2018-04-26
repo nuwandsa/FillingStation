@@ -47,7 +47,7 @@
             this.colOBQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
             this.btnPOedit = new MetroFramework.Controls.MetroButton();
-            this.btnPOsave = new MetroFramework.Controls.MetroButton();
+            this.btnOBsave = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgdOBItemSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgdOB)).BeginInit();
             this.SuspendLayout();
@@ -339,15 +339,15 @@
             this.btnPOedit.Text = "Edit";
             this.btnPOedit.UseSelectable = true;
             // 
-            // btnPOsave
+            // btnOBsave
             // 
-            this.btnPOsave.Location = new System.Drawing.Point(486, 24);
-            this.btnPOsave.Name = "btnPOsave";
-            this.btnPOsave.Size = new System.Drawing.Size(50, 40);
-            this.btnPOsave.TabIndex = 1156;
-            this.btnPOsave.Text = "Save";
-            this.btnPOsave.UseSelectable = true;
-            this.btnPOsave.Click += new System.EventHandler(this.btnPOsave_Click);
+            this.btnOBsave.Location = new System.Drawing.Point(486, 24);
+            this.btnOBsave.Name = "btnOBsave";
+            this.btnOBsave.Size = new System.Drawing.Size(50, 40);
+            this.btnOBsave.TabIndex = 1156;
+            this.btnOBsave.Text = "Save";
+            this.btnOBsave.UseSelectable = true;
+            this.btnOBsave.Click += new System.EventHandler(this.btnOBsave_Click);
             // 
             // frmOpenningBalence
             // 
@@ -356,7 +356,7 @@
             this.ClientSize = new System.Drawing.Size(654, 455);
             this.Controls.Add(this.metroTextBox3);
             this.Controls.Add(this.btnPOedit);
-            this.Controls.Add(this.btnPOsave);
+            this.Controls.Add(this.btnOBsave);
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
@@ -395,6 +395,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colOBQuantity;
         private MetroFramework.Controls.MetroTextBox metroTextBox3;
         private MetroFramework.Controls.MetroButton btnPOedit;
-        private MetroFramework.Controls.MetroButton btnPOsave;
+        private MetroFramework.Controls.MetroButton btnOBsave;
     }
 }

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
             this.btnInvoedit = new MetroFramework.Controls.MetroButton();
             this.btnInvoview = new MetroFramework.Controls.MetroButton();
@@ -76,6 +76,10 @@
             this.txtCustomer = new MetroFramework.Controls.MetroTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtPayingAmount = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtInvoBy = new MetroFramework.Controls.MetroTextBox();
+            this.txtnoofreceipts = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgdInvoice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgdInvoItemSearch)).BeginInit();
             this.SuspendLayout();
@@ -169,12 +173,13 @@
             // 
             // btnInvosave
             // 
-            this.btnInvosave.Location = new System.Drawing.Point(183, 21);
+            this.btnInvosave.Location = new System.Drawing.Point(183, 22);
             this.btnInvosave.Name = "btnInvosave";
             this.btnInvosave.Size = new System.Drawing.Size(50, 40);
             this.btnInvosave.TabIndex = 10;
             this.btnInvosave.Text = "Save";
             this.btnInvosave.UseSelectable = true;
+            this.btnInvosave.Click += new System.EventHandler(this.btnInvosave_Click);
             // 
             // txtInvoicesearch
             // 
@@ -213,14 +218,14 @@
             this.dgdInvoice.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgdInvoice.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgdInvoice.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgdInvoice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgdInvoice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgdInvoice.ColumnHeadersHeight = 20;
             this.dgdInvoice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgdInvoice.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -230,28 +235,28 @@
             this.colInvoiceItemUoM,
             this.colInvoiceUnitPrice,
             this.colInvoiceSubTotal});
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgdInvoice.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgdInvoice.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgdInvoice.EnableHeadersVisualStyles = false;
             this.dgdInvoice.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgdInvoice.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgdInvoice.Location = new System.Drawing.Point(36, 179);
             this.dgdInvoice.Name = "dgdInvoice";
             this.dgdInvoice.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgdInvoice.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgdInvoice.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgdInvoice.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgdInvoice.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgdInvoice.Size = new System.Drawing.Size(633, 328);
@@ -296,7 +301,7 @@
             this.metroLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.Location = new System.Drawing.Point(754, 250);
+            this.metroLabel1.Location = new System.Drawing.Point(754, 300);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(26, 25);
             this.metroLabel1.TabIndex = 1140;
@@ -320,7 +325,7 @@
             this.txtInvoDiscRate.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.txtInvoDiscRate.Lines = new string[] {
         "0.00"};
-            this.txtInvoDiscRate.Location = new System.Drawing.Point(683, 242);
+            this.txtInvoDiscRate.Location = new System.Drawing.Point(683, 292);
             this.txtInvoDiscRate.MaxLength = 32767;
             this.txtInvoDiscRate.Name = "txtInvoDiscRate";
             this.txtInvoDiscRate.PasswordChar = '\0';
@@ -347,7 +352,7 @@
             this.cboInvoicePaymentMethod.Items.AddRange(new object[] {
             "Cash",
             "Credit Card"});
-            this.cboInvoicePaymentMethod.Location = new System.Drawing.Point(683, 380);
+            this.cboInvoicePaymentMethod.Location = new System.Drawing.Point(683, 430);
             this.cboInvoicePaymentMethod.Name = "cboInvoicePaymentMethod";
             this.cboInvoicePaymentMethod.Size = new System.Drawing.Size(203, 29);
             this.cboInvoicePaymentMethod.TabIndex = 1138;
@@ -358,7 +363,7 @@
             this.lblPOSInvoicePaymentMethod.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPOSInvoicePaymentMethod.AutoSize = true;
             this.lblPOSInvoicePaymentMethod.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPOSInvoicePaymentMethod.Location = new System.Drawing.Point(679, 356);
+            this.lblPOSInvoicePaymentMethod.Location = new System.Drawing.Point(679, 406);
             this.lblPOSInvoicePaymentMethod.Name = "lblPOSInvoicePaymentMethod";
             this.lblPOSInvoicePaymentMethod.Size = new System.Drawing.Size(129, 21);
             this.lblPOSInvoicePaymentMethod.TabIndex = 1137;
@@ -369,7 +374,7 @@
             this.txtInvoicePaidAmount.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtInvoicePaidAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtInvoicePaidAmount.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInvoicePaidAmount.Location = new System.Drawing.Point(683, 442);
+            this.txtInvoicePaidAmount.Location = new System.Drawing.Point(683, 492);
             this.txtInvoicePaidAmount.MinimumSize = new System.Drawing.Size(86, 33);
             this.txtInvoicePaidAmount.Name = "txtInvoicePaidAmount";
             this.txtInvoicePaidAmount.ReadOnly = true;
@@ -383,7 +388,7 @@
             this.lblPOSInvoicePaidAmount.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPOSInvoicePaidAmount.AutoSize = true;
             this.lblPOSInvoicePaidAmount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPOSInvoicePaidAmount.Location = new System.Drawing.Point(679, 418);
+            this.lblPOSInvoicePaidAmount.Location = new System.Drawing.Point(679, 468);
             this.lblPOSInvoicePaidAmount.Name = "lblPOSInvoicePaidAmount";
             this.lblPOSInvoicePaidAmount.Size = new System.Drawing.Size(100, 21);
             this.lblPOSInvoicePaidAmount.TabIndex = 1133;
@@ -394,7 +399,7 @@
             this.txtInvoiceBalance.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtInvoiceBalance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtInvoiceBalance.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInvoiceBalance.Location = new System.Drawing.Point(683, 573);
+            this.txtInvoiceBalance.Location = new System.Drawing.Point(683, 623);
             this.txtInvoiceBalance.MinimumSize = new System.Drawing.Size(86, 33);
             this.txtInvoiceBalance.Name = "txtInvoiceBalance";
             this.txtInvoiceBalance.Size = new System.Drawing.Size(203, 33);
@@ -407,7 +412,7 @@
             this.lblPOSInvoiceBalance.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPOSInvoiceBalance.AutoSize = true;
             this.lblPOSInvoiceBalance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPOSInvoiceBalance.Location = new System.Drawing.Point(679, 549);
+            this.lblPOSInvoiceBalance.Location = new System.Drawing.Point(679, 599);
             this.lblPOSInvoiceBalance.Name = "lblPOSInvoiceBalance";
             this.lblPOSInvoiceBalance.Size = new System.Drawing.Size(63, 21);
             this.lblPOSInvoiceBalance.TabIndex = 1131;
@@ -432,7 +437,7 @@
             this.lblPOSInvoiceDiscount.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPOSInvoiceDiscount.AutoSize = true;
             this.lblPOSInvoiceDiscount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPOSInvoiceDiscount.Location = new System.Drawing.Point(683, 218);
+            this.lblPOSInvoiceDiscount.Location = new System.Drawing.Point(683, 268);
             this.lblPOSInvoiceDiscount.Name = "lblPOSInvoiceDiscount";
             this.lblPOSInvoiceDiscount.Size = new System.Drawing.Size(115, 21);
             this.lblPOSInvoiceDiscount.TabIndex = 1123;
@@ -484,7 +489,7 @@
             this.txtInvoiceTotalDue.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtInvoiceTotalDue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtInvoiceTotalDue.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInvoiceTotalDue.Location = new System.Drawing.Point(683, 303);
+            this.txtInvoiceTotalDue.Location = new System.Drawing.Point(683, 353);
             this.txtInvoiceTotalDue.Name = "txtInvoiceTotalDue";
             this.txtInvoiceTotalDue.Size = new System.Drawing.Size(203, 43);
             this.txtInvoiceTotalDue.TabIndex = 1122;
@@ -496,7 +501,7 @@
             this.txtInvoiceDiscount.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtInvoiceDiscount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtInvoiceDiscount.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInvoiceDiscount.Location = new System.Drawing.Point(786, 242);
+            this.txtInvoiceDiscount.Location = new System.Drawing.Point(786, 292);
             this.txtInvoiceDiscount.MinimumSize = new System.Drawing.Size(86, 33);
             this.txtInvoiceDiscount.Name = "txtInvoiceDiscount";
             this.txtInvoiceDiscount.Size = new System.Drawing.Size(100, 33);
@@ -510,7 +515,7 @@
             this.lblPOSInvoiceTotalDue.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPOSInvoiceTotalDue.AutoSize = true;
             this.lblPOSInvoiceTotalDue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPOSInvoiceTotalDue.Location = new System.Drawing.Point(679, 279);
+            this.lblPOSInvoiceTotalDue.Location = new System.Drawing.Point(679, 329);
             this.lblPOSInvoiceTotalDue.Name = "lblPOSInvoiceTotalDue";
             this.lblPOSInvoiceTotalDue.Size = new System.Drawing.Size(83, 21);
             this.lblPOSInvoiceTotalDue.TabIndex = 1124;
@@ -807,7 +812,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(679, 489);
+            this.label3.Location = new System.Drawing.Point(679, 539);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 21);
             this.label3.TabIndex = 1131;
@@ -818,7 +823,7 @@
             this.txtPayingAmount.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPayingAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPayingAmount.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPayingAmount.Location = new System.Drawing.Point(683, 513);
+            this.txtPayingAmount.Location = new System.Drawing.Point(683, 563);
             this.txtPayingAmount.MinimumSize = new System.Drawing.Size(86, 33);
             this.txtPayingAmount.Name = "txtPayingAmount";
             this.txtPayingAmount.Size = new System.Drawing.Size(203, 33);
@@ -827,11 +832,81 @@
             this.txtPayingAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPayingAmount.TextChanged += new System.EventHandler(this.txtPayingAmount_TextChanged);
             // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(25, 527);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 21);
+            this.label4.TabIndex = 1127;
+            this.label4.Text = "Invoice By";
+            // 
+            // txtInvoBy
+            // 
+            // 
+            // 
+            // 
+            this.txtInvoBy.CustomButton.Image = null;
+            this.txtInvoBy.CustomButton.Location = new System.Drawing.Point(190, 1);
+            this.txtInvoBy.CustomButton.Name = "";
+            this.txtInvoBy.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtInvoBy.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtInvoBy.CustomButton.TabIndex = 1;
+            this.txtInvoBy.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtInvoBy.CustomButton.UseSelectable = true;
+            this.txtInvoBy.CustomButton.Visible = false;
+            this.txtInvoBy.Lines = new string[0];
+            this.txtInvoBy.Location = new System.Drawing.Point(116, 527);
+            this.txtInvoBy.MaxLength = 32767;
+            this.txtInvoBy.Name = "txtInvoBy";
+            this.txtInvoBy.PasswordChar = '\0';
+            this.txtInvoBy.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtInvoBy.SelectedText = "";
+            this.txtInvoBy.SelectionLength = 0;
+            this.txtInvoBy.SelectionStart = 0;
+            this.txtInvoBy.ShortcutsEnabled = true;
+            this.txtInvoBy.Size = new System.Drawing.Size(212, 23);
+            this.txtInvoBy.TabIndex = 1141;
+            this.txtInvoBy.UseSelectable = true;
+            this.txtInvoBy.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtInvoBy.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtInvoBy.TextChanged += new System.EventHandler(this.txtItemCode_TextChanged);
+            this.txtInvoBy.Click += new System.EventHandler(this.txtItemCode_Click);
+            this.txtInvoBy.Leave += new System.EventHandler(this.txtItemCode_Leave);
+            // 
+            // txtnoofreceipts
+            // 
+            this.txtnoofreceipts.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtnoofreceipts.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtnoofreceipts.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnoofreceipts.Location = new System.Drawing.Point(683, 232);
+            this.txtnoofreceipts.MinimumSize = new System.Drawing.Size(86, 33);
+            this.txtnoofreceipts.Name = "txtnoofreceipts";
+            this.txtnoofreceipts.ReadOnly = true;
+            this.txtnoofreceipts.Size = new System.Drawing.Size(203, 33);
+            this.txtnoofreceipts.TabIndex = 1144;
+            this.txtnoofreceipts.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(679, 208);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(111, 21);
+            this.label5.TabIndex = 1143;
+            this.label5.Text = "No of Receipts";
+            // 
             // frmInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(928, 678);
+            this.Controls.Add(this.txtnoofreceipts);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.dgdInvoItemSearch);
             this.Controls.Add(this.txtSubTotal);
             this.Controls.Add(this.txtItmUnitPrice);
@@ -839,6 +914,7 @@
             this.Controls.Add(this.txtItemQuantity);
             this.Controls.Add(this.txtItemName);
             this.Controls.Add(this.txtCustomer);
+            this.Controls.Add(this.txtInvoBy);
             this.Controls.Add(this.txtInvoiceID);
             this.Controls.Add(this.txtItemCode);
             this.Controls.Add(this.metroLabel1);
@@ -853,6 +929,7 @@
             this.Controls.Add(this.lblPOSInvoiceBalance);
             this.Controls.Add(this.txtInvoiceTotal);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.lblPOSInvoiceDiscount);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblPOSInvoiceTotal);
@@ -928,5 +1005,9 @@
         private MetroFramework.Controls.MetroTextBox txtCustomer;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtPayingAmount;
+        private System.Windows.Forms.Label label4;
+        private MetroFramework.Controls.MetroTextBox txtInvoBy;
+        private System.Windows.Forms.TextBox txtnoofreceipts;
+        private System.Windows.Forms.Label label5;
     }
 }

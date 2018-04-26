@@ -109,6 +109,21 @@ namespace FillingStation.Data
             }
         }
 
+        internal static decimal getOneDecimalValue(string quary)
+        {
+            try
+            {
+
+                MySqlCommand com = new MySqlCommand(quary, con);
+                // return (int) com.ExecuteScalar();
+                decimal ans = Convert.ToDecimal(com.ExecuteScalar());
+                return ans;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
         internal static int countRow(string quary)
         {
             int count;
